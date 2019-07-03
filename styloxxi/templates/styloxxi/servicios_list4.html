@@ -68,18 +68,17 @@
     <!-- Wrapper for slides -->
     <div class="carousel-inner">
       <div class="item active"><div class="crop">
-        <img src="{{ servicio.image.url }}" style="width:60%;"alt="image"> </div>
+        <img src="{{ servicio.image.url }}" style="height:500px;"alt="image"> </div>
       </div>
       <div class="item"><div class="crop">
-        <img src="{{ servicio.image2.url }}"style="width:60%;" alt="image"> </div>
+        <img src="{{ servicio.image2.url }}"style="height:500px;" alt="image"> </div>
       </div> 
       <div class="item"><div class="crop">
-        <img src="{{ servicio.image3.url }}"style="width:60%;" alt="image"> </div>
+        <img src="{{ servicio.image3.url }}"style="height:500px;" alt="image"> </div>
       </div>
-      <div class="item"> <div class="crop2">
-       <video  width="90%" height="100%" margin="20px" autoplay loop muted>
-       <source src="{{ servicio.video.url }}" type="video/mp4" /></video> </div>
-      </div>
+      <div class="item"> 
+       <video  style="width: 880px"  margin="20px" autoplay loop muted>
+       <source src="{{ servicio.video.url }}" type="video/mp4"/></video> </div>
     </div> 
            <!-- Left and right controls -->
     <a class="left carousel-control" href="#myCarousel" data-slide="prev">
