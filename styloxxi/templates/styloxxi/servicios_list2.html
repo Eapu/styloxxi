@@ -24,20 +24,20 @@
   <div class="row">
    <div class="col-sm-3">
     <div class="box2"><br><br>
-      {% for servicio in servicios %}
-        <a href="{% url 'servicios_list'  %}" style="color:white">
-        {% if forloop.counter0 == 0 %}
-        <h4>{{ servicio.title }}</h4></a> 
-        {% endif %}
-        <a href="{% url 'servicios_list2'  %}" style="color:#1F90FF">
-        {% if forloop.counter0 == 1 %}
-        <h4>{{ servicio.title }}</h4></a>
-        {% endif %}
-        <a href="{% url 'servicios_list3'  %}" style="color:white">
-        {% if forloop.counter0 == 2 %}
-        <h4>{{ servicio.title }}</h4></a>
-        {% endif %}  
-        <a href="{% url 'servicios_list4'  %}" style="color:white">
+     {% for servicio in servicios %}
+      <a href="{% url 'servicios_list'  %}" style="color:white">
+      {% if forloop.counter0 == 0 %}
+      <h4>{{ servicio.title }}</h4></a>
+      {% endif %}
+      <a href="{% url 'servicios_list2'  %}" style="color:#1F90F">
+      {% if forloop.counter0 == 1 %}
+      <h4>{{ servicio.title }}</h4></a>
+      {% endif %}
+      <a href="{% url 'servicios_list3'  %}" style="color:white">
+      {% if forloop.counter0 == 2 %}
+      <h4>{{ servicio.title }}</h4></a>
+      {% endif %} 
+         <a href="{% url 'servicios_list4'  %}" style="color:white">
         {% if forloop.counter0 == 3 %}
         <h4>{{ servicio.title }}</h4></a>
         {% endif %}
@@ -53,14 +53,8 @@
         {% if forloop.counter0 == 6 %}
         <h4>{{ servicio.title }}</h4></a>
         {% endif %}
-  
-      {% endfor %}
-        {% endfor %} 
-      <h4> MATRIX</h4>
-      <h4> MORROCANOIL</h4>
-      <h4> B3</h4>
-      <h4> RECOGIDOS</h4> 
-      <h4> VARIOS</h4>
+ 
+     {% endfor %} 
     </div>
   </div>
    <div class="col-sm-9" style="width:50%">
