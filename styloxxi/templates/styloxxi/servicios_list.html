@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Play" />
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Black+Ops+One" />
+    <link rel="stylesheet" href="https://elenacube.s3-eu-west-1.amazonaws.com/static/css/servicios_list.css">
+</head>
+<body>
+  <br>
+  <a href="/" style="padding:15px"> {% for logo in logos %}
+      {% if forloop.last %}
+        <img class="im1" src="{{ logo.logo.url }}" type="png/jpg"style="width:15%">  
+       {% endif %}  
+       {% endfor %}</a> 
+  <center><h1> E l i g i e n d o &nbsp; t u &nbsp;&nbsp; s e r v i c i o</h1></center>
+  <div class="row">
+   <div class="col-sm-3">
+    <div class="box2"><br><br>  
+      {% for servicio in servicios %}
+        <a href="{% url 'servicios_list'  %}" style="color:#1F90FF">
+        {% if forloop.counter0 == 0 %}
+        <h4>{{ servicio.title }}</h4></a>
+        {% endif %}
+        <a href="{% url 'servicios_list2'  %}" style="color:white">  
+        {% if forloop.counter0 == 1 %}
+        <h4>{{ servicio.title }}</h4></a>
+        {% endif %}
+        <a href="{% url 'servicios_list3'  %}" style="color:white">
+        {% if forloop.counter0 == 2 %}
+        <h4>{{ servicio.title }}</h4></a>
+        {% endif %} 
+      {% endfor %}
+      <h4> MORROCANOIL</h4>
+      <h4> B3</h4>
+      <h4> RECOGIDOS</h4> 
+      <h4> VARIOS</h4>
+    </div>
+  </div>
+   <div class="col-sm-9" style="width:50%">
+   <br>
+    <center>
+    {% for servicio in servicios %}
+     {% if forloop.counter0 == 0 %}
+      {% if servicio.image %}
+  <div id="myCarousel" class="carousel slide" data-ride="carousel"style="width:100%;">  
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+      <div class="item active"><div class="crop">
+        <img src="{{ servicio.image.url }}" style="width:60%;"alt="image"> </div>
+      </div>
+      <div class="item"><div class="crop">
+        <img src="{{ servicio.image2.url }}"style="width:60%;" alt="image"> </div>
+      </div> 
+      <div class="item"><div class="crop">
+        <img src="{{ servicio.image3.url }}"style="width:60%;" alt="image"> </div>
+      </div>
+      <div class="item"> <div class="crop2">
+       <video  width="90%" height="100%" margin="20px" autoplay loop muted>
+       <source src="{{ servicio.video.url }}" type="video/mp4" /></video> </div>
+      </div>
+    </div> 
+           <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span></a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span></a>
+          <!-- Indicators -->
+      <br> 
+      <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+      <li data-target="#myCarousel" data-slide-to="3"></li>
+
+    </ol>
+  </div>
+  <p><a href="{% url 'servicio_info' pk=servicio.pk %}">
+  <button href="" type="button" class="btn info">SELECIONAR</button></a></p>
+    {% endif %} 
+    {% endif %} 
+{% endfor %}
+    </center>
+   </div>
+  </div>
+</body>
+</html>

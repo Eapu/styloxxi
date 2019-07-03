@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+     <style type="text/css" media="screen"><!--
+
+  body 
+    {
+    color: white;
+    background-color: #000000;
+    margin: 0px
+    }
+
+
+hr {
+border-color: blue;
+
+
+}
+div.ex1 {
+  width: 250px;
+  height: 600px;
+  overflow: scroll;
+  padding: 15px;
+  margin-left: : 290px;
+
+  /*border: 1px solid #ddd; /* Gray border */
+  border-radius: 4px;  /* Rounded border */
+}
+div.ex2 {
+  background-color: lightgrey;
+  width: 200px;
+  /*border: 15px solid green;*/
+}
+img.im1 {
+  border: 1px solid #ddd; /* Gray border */
+  border-radius: 4px;  /* Rounded border */
+  padding: 5px; /* Some padding */
+  width: 120px; /* Set a small width */
+}
+img.im1:hover {
+  box-shadow: 0 0 2px 6px rgba(0, 140, 186);
+}
+
+.sidenav {
+    float: right;
+    width: 200px;
+    background: #dff;
+}
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #2196F3;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #064579;
+}
+
+  </style>
+  </head>
+  <body>
+
+  </head>
+  <body>
+
+<div class="container-fluid">
+  <div class="sidenav">
+  <a href="#about">Servicios</a>
+
+  <a href="">Videos</a>
+  <a href="#clients">Clientes</a>
+</div>
+    <!-- logo -->
+  <div class="row3" style="width:800px">
+   <div class="row3.1" style="width:300px; float:left;  padding: 10px;">  
+        <h1> <a href="/"><img class="im1" src="https://elenacube.s3-eu-west-1.amazonaws.com/media/styloxxi.png" type="video/mp4"style="width:200px"></h1></a> 
+   </div>
+  </div> 
+    <div class="col-sm-6"><div class="w3-sidebar w3-bar-block" style="width:100%"> 
+
+     Tags:
+
+          {{ tag.name }}
+
+      {% for color in colors %}
+      {% if color.image %}  {% if color.image2 %} {% if color.image3 %}
+  <h2><center>{{ corte.title }}</center></h2>  
+  
+
+    <!-- Wrapper for slides -->
+   
+        <img src="{{ color.image.url }}" alt="color" style="width:100%;">
+         
+        <img src="{{ color.image2.url }}" alt="color" style="width:100%;">
+        
+    
+        <img src="{{ color.image3.url }}" alt="color" style="width:100%;">
+             
+   
+     {% endif %}   {% endif %}  {% endif %}                 
+        {% endfor %}
+</div>
+
+</div>
+
+  </body>
+      <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>   
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  </body>
+  <script>
+$(document).ready(function(){
+  $("#myModal").on("hidden.bs.modal",function(){
+    $("#iframeYoutube").attr("src","#");
+  })
+})
+
+function changeVideo(vId){
+  var iframe=document.getElementById("iframeYoutube");
+  iframe.src="https://www.youtube.com/embed/"+vId;
+
+  $("#myModal").modal("show");
+}</script>
+</html>
+
+</html>

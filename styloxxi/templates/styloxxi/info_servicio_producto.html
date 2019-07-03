@@ -1,0 +1,95 @@
+{% load instagram_client %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Play" />
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Black+Ops+One" />
+    <link rel="stylesheet" href="https://elenacube.s3-eu-west-1.amazonaws.com/static/css/info_servicio_producto.css">
+</head>
+<body>
+  <!-- logo  -->
+  <br><a href="javascript:history.go(-1)" style="padding:15px;">{% for logo in logos %}
+      {% if forloop.last %}
+        <img class="im1" src="{{ logo.logo.url }}" type="png/jpg"style="width:15%">  
+       {% endif %}  
+       {% endfor %}</a>
+     <!--  3 columns  -->
+ <div class="row">
+  <div class="column" >
+     <!-- leftside -->
+     <div class="box_insta"><br>
+     <h3>De nuestras redes:</h3>
+       <div id="django_recent_media_wall">
+    {% instagram_user_recent_media any__k %}
+    {% for media in recent_media %}
+        <div class="django_instagram_media_wall_item"><img src="https://media.giphy.com/media/5qG0XYryDJZOPSLMIu/giphy.gif" type="png/jpg"style="width:15%;">
+                <img src="{{ media.thumbnail_src }}" style="width: 90%"/><br><br>
+                <span>{{ media.edge_media_to_caption.edges.0.node.text }}</span>
+       
+        </div>
+    {% endfor %}
+  </div>
+</div>
+ <div class="box1">
+  <br>
+  <h2>COMPARTE</h2>
+  <p style="font-size: 15px">  <p style="font-size: 15px"><h5>Hazte una foto en nuestro photocall y comparte amor</h5></p>
+  <br>
+  <a href="{% url 'photocall'  %}">
+    <button href="" type="button" class="btn info" >PHOTOCALL</button></a>
+ </div>
+</div>
+<!-- mainspace -->
+<div class="column2"></div>
+<!-- sidebarright -->
+<div class="column3">
+ <div class="box2"><br>
+  <h3>{{ producto.title }} <img src="https://media.giphy.com/media/t0SMqPCEx1hYI/giphy.gif
+" type="png/jpg"style="width:30%;"></h3>
+<br>
+<a href="/"><img class="im1" src="{{ producto.image.url }}" type="png/jpg"style="width:100%;"></a> 
+<br>
+
+<p align="justify"><h5>{{ producto.body }}</h5></p>
+<br>
+
+   <center>   
+    <a href="javascript:history.go(-1)">
+<button href="" type="button" class="btn info">ATRAS</button></a></center>
+
+  <br><br><br>
+ </div>
+</div>
+ 
+</body>
+
+   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>   
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+       <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+<script>
+$(document).ready(function(){
+  $('[data-toggle="tooltip"]').tooltip();   
+});
+$("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+</script>
+</script>
+</html>
+
+</html>

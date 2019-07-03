@@ -1,0 +1,161 @@
+html, body, h3, h4, h5, h6 {
+  font-family: Play;
+  line-height: 1.6;
+  }
+
+h1,h2 {  font-family: Black Ops One; 
+}
+  body 
+    {
+    color: white;
+    background-color: #000000;
+    margin: 0px
+    }
+
+
+hr {
+border-color: blue;
+
+
+}
+
+
+div.ex1 {
+  width: 250px;
+  height: 666px;
+  overflow: scroll;
+  padding: 13px;
+  /*border: 1px solid #ddd; /* Gray border */
+  border-radius: 4px;  /* Rounded border */
+}
+div.ex2 {
+  background-color: lightgrey;
+  width: 250px;
+  height: 166px;
+
+  /*border: 15px solid green;*/
+}
+img.im1 {
+  border: 1px solid #none; /* Gray border */
+  border-radius: 4px;  /* Rounded border */
+  padding: 5px; /* Some padding */
+  width: 120px; /* Set a small width */
+   /* Set a small width */
+}
+
+img.im1:hover {
+  box-shadow: 0 0 2px 6px rgba(0, 140, 186);
+}
+* {
+  box-sizing: border-box;
+}
+
+.sidenav {
+    float: right;
+    width: 200px;
+    background: #dff;
+}
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #2196F3;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #064579;
+}
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 25%;
+  padding: 10px;
+  height: 350px; /* Should be removed. Only for demonstration */
+}
+.column2 {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+.column3 {
+  float: left;
+  width: 25%;
+  padding: 5px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.flex-container {
+  display: flex;
+  flex-wrap: nowrap;
+  background-color: #000000;
+}
+
+.flex-container > div {
+  background-color: #000000;
+  width: 250px;
+  margin: 10px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
+}
+.box1 {
+  background-color: transparent;
+  width: 220px;
+  border: 0px solid green;
+  margin-left: 60px;
+}
+.box2 {
+  background-color: transparent;
+  width: 300px;
+  border: 0px solid green;
+  margin-left: 30px;
+
+}
+.box_insta {
+  background-color: transparent;
+  overflow: hidden;
+  width: 220px;
+  height: 420px;
+  overflow: scroll;
+  border: 0px solid green;
+  margin-left: 60px;
+}
+.btn {
+  border: 2px solid black;
+  background-color: transparent;
+  color: black;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+
+/* Blue */
+.info {
+  border-color: #2196F3;
+  color: dodgerblue
+}
+
+.info:hover {
+  background: #2196F3;
+  color: white;
+}
+.crop {
+ height: 200px;
+ width: 200px;
+ overflow: hidden;
+}
+.crop img {
+ height: auto;
+ width: 230px;
+ margin-left: 50px;
+
+}
