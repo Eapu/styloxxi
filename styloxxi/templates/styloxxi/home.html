@@ -45,10 +45,10 @@ h1,h2 {  font-family: Black Ops One;
       </div>
     </div>
     <div class="col-sm-9" style="height:650px;">
-      {% for video in videos %}
+      {% for logo in logos %}
       {% if forloop.last %}
       <video class="im1" width="90%" height="120%" margin="20px" autoplay loop muted>
-       <source src="{{ video.video.url }}" type="video/mp4" />
+       <source src="{{ logo.video.url }}" type="video/mp4" />
       </video>
       {% endif %}  
       {% endfor %}  

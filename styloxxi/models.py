@@ -86,6 +86,7 @@ class Logo(models.Model):
 	slug = models.SlugField(max_length=250, unique_for_date="publish",null=True, blank=True)
 	logo = models.FileField(null=True, blank=True)
 	title = models.CharField(max_length=250,null=True, blank=True)
+	video = models.FileField(null=True, blank=True)
 	body = models.TextField(blank=True)
 	publish = models.DateTimeField(default=timezone.now)
 	published = PublishedManager()
