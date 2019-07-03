@@ -35,11 +35,25 @@
         {% if forloop.counter0 == 2 %}
         <h4>{{ servicio.title }}</h4></a>
         {% endif %} 
+        <a href="{% url 'servicios_list4'  %}" style="color:white">
+        {% if forloop.counter0 == 3 %}
+        <h4>{{ servicio.title }}</h4></a>
+        {% endif %}
+        <a href="{% url 'servicios_list5'  %}" style="color:white">
+        {% if forloop.counter0 == 4 %}
+        <h4>{{ servicio.title }}</h4></a>
+        {% endif %} 
+        <a href="{% url 'servicios_list6'  %}" style="color:white">
+        {% if forloop.counter0 == 5 %}
+        <h4>{{ servicio.title }}</h4></a>
+        {% endif %}
+        <a href="{% url 'servicios_list7'  %}" style="color:white">
+        {% if forloop.counter0 == 6 %}
+        <h4>{{ servicio.title }}</h4></a>
+        {% endif %}
+
       {% endfor %}
-      <h4> MORROCANOIL</h4>
-      <h4> B3</h4>
-      <h4> RECOGIDOS</h4> 
-      <h4> VARIOS</h4>
+
     </div>
   </div>
    <div class="col-sm-9" style="width:50%">
