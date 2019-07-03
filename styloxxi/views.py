@@ -35,17 +35,17 @@ def servicios_list5(request):
 	logos = Logo.published.all()
 	servicios = Servicio.published.all()
 	productos = Producto.published.all()
-	return render(request,'styloxxi/servicios_list4.html',{'servicios': servicios,'productos':productos,'logos':logos})
+	return render(request,'styloxxi/servicios_list5.html',{'servicios': servicios,'productos':productos,'logos':logos})
 def servicios_list6(request):
 	logos = Logo.published.all()
 	servicios = Servicio.published.all()
 	productos = Producto.published.all()
-	return render(request,'styloxxi/servicios_list5.html',{'servicios': servicios,'productos':productos,'logos':logos})
+	return render(request,'styloxxi/servicios_list6.html',{'servicios': servicios,'productos':productos,'logos':logos})
 def servicios_list7(request):
 	logos = Logo.published.all()
 	servicios = Servicio.published.all()
 	productos = Producto.published.all()
-	return render(request,'styloxxi/servicios_list6.html',{'servicios': servicios,'productos':productos,'logos':logos})
+	return render(request,'styloxxi/servicios_list7.html',{'servicios': servicios,'productos':productos,'logos':logos})
 
 def servicio_info(request, pk):
 	logos = Logo.published.all()
